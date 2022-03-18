@@ -97,7 +97,7 @@
         app:srcCompat="@drawable/xiao" />
 
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/btn_submit"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"

@@ -10,11 +10,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btn_start = findViewById<Button>(R.id.play_now_btn)
+        val btn_start = findViewById<Button>(R.id.btn_play_now)
         btn_start.setOnClickListener {
             //going to the next acivity
             val intent = Intent(this,Player_info::class.java)
             startActivity(intent)
+        }
+
+        val btn_exit = findViewById<Button>(R.id.btn_exit)
+        btn_exit.setOnClickListener {
+            //exit
+            finishAffinity()
         }
     }
 }
