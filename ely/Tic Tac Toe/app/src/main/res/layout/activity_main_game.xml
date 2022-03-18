@@ -4,6 +4,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainGame">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="304dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_btn"
+            android:onClick="clickPlayAgain"
+            android:text="Play Again"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.428" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellow_btn"
+            android:onClick="backHome"
+            android:text="Back Home"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.428" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:layout_width="409dp"
+        android:layout_height="300dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="174dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3pt"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button00"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:onClick="buClick" />
+
+            <Button
+                android:id="@+id/button01"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:layout_marginLeft="3pt"
+                android:onClick="buClick"/>
+
+            <Button
+                android:id="@+id/button02"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:layout_marginLeft="3pt"
+                android:onClick="buClick"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:onClick="buClick"/>
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:layout_marginLeft="3pt"
+                android:onClick="buClick"/>
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:layout_marginLeft="3pt"
+                android:onClick="buClick"/>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:onClick="buClick"/>
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:layout_marginLeft="3pt"
+                android:onClick="buClick"/>
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:layout_marginLeft="3pt"
+                android:onClick="buClick"/>
+        </TableRow>
+
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

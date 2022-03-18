@@ -29,8 +29,14 @@ class Player_info : AppCompatActivity() {
         if(TextUtils.isEmpty(p1.getText().toString()) || TextUtils.isEmpty(p2.getText().toString())){
             Toast.makeText(applicationContext,  "Empty field not allowed!", duration).show();
         } else {
-            //going to the next acivity (Main Game)
+            //going to the next acivity (Main Game)\
+            var p1_name = p1.getText().toString()
+            var p2_name = p2.getText().toString()
+
+
             val intent = Intent(this,MainGame::class.java)
+            intent.putExtra("player 1", p1_name)
+            intent.putExtra("player 2", p2_name)
             startActivity(intent)
         }
     }
