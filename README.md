@@ -1,2 +1,2 @@
 # Tic-Tac-Toe
-hello - hamstur
+Making Tic-Tac-Toe using Android Studio.
