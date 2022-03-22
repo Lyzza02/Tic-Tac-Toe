@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Tic Tac Toe</string>
+    <string name="txt_title">Tic Tac Toe</string>
+    <string name="btn_play">Play Now</string>
+    <string name="btn_exit">Exit</string>
+    <string name="txt_presented">Presented by GooGooGnomes</string>
+
+    <string name="txt_p1">Player 1</string>
+    <string name="txt_p2">Player 2</string>
+
+    <string name="etxt_name">Enter Name</string>
+    <string name="btn_submit">Submit</string>
 </resources>
