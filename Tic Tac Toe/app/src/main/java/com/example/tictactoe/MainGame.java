@@ -114,11 +114,12 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
     public boolean checkWinner(){
         boolean winnerResult = false;
 
-        for(int [] winningPosition: winningPositions){
-            if(gameState[winningPosition[0]] == gameState[winningPosition[1]] &&
+        for(int [] winningPosition: winningPositions) {
+            if (gameState[winningPosition[0]] == gameState[winningPosition[1]] &&
                     gameState[winningPosition[1]] == gameState[winningPosition[2]] &&
-                        gameState[winningPosition[0]] != 2);
-            winnerResult = true;
+                    gameState[winningPosition[0]] != 2) {
+                winnerResult = true;
+            }
         }
         return winnerResult;
     }
