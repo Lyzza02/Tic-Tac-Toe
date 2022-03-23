@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class MainGame extends AppCompatActivity implements View.OnClickListener{
 
@@ -38,6 +39,19 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
         playerStatus = (TextView) findViewById(R.id.playerStatus);
 
         resetGame = (Button) findViewById(R.id.resetGame);
+
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+
+        if(b!=null)
+        {
+            String tmp_1 =(String) b.get("p1_name");
+            String tmp_2 =(String) b.get("p2_name");
+
+            this.playerOneName = tmp_1;
+            this.playerTwoName = tmp_2;
+        }
+
 
         for(int i = 0; i < buttons.length; i++){
             String buttonId = "btn_" + i;

@@ -35,6 +35,8 @@ class Player_info : AppCompatActivity() {
         } else {
             //going to the next acivity (Main Game)
             val intent = Intent(this,MainGame::class.java)
+            intent.putExtra("p1_name",p1.getText().toString())
+            intent.putExtra("p2_name",p2.getText().toString())
             startActivity(intent)
             finish()
         }
