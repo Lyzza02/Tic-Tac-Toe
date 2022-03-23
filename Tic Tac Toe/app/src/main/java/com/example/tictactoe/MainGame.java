@@ -63,11 +63,11 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
 
         if(activePlayer){
             ((Button) v).setText("X");
-            ((Button) v).setTextColor(Color.parseColor("#57e329"));
+            ((Button) v).setTextColor(Color.parseColor("#F0A500"));
             gameState[gameStatePointer] = 0;
         }else{
             ((Button) v).setText("O");
-            ((Button) v).setTextColor(Color.parseColor("#dc33e8"));
+            ((Button) v).setTextColor(Color.parseColor("#D885A3"));
             gameState[gameStatePointer] = 1;
         }
         roundCount++;
