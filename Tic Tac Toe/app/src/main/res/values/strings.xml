@@ -2,7 +2,7 @@
     <string name="app_name">Tic Tac Toe</string>
     <string name="txt_title">Tic Tac Toe</string>
     <string name="btn_play">Play Now</string>
-    <string name="btn_exit">Exit</string>
+    <string name="btn_about">About US</string>
     <string name="txt_presented">Presented by GooGooGnomes</string>
 
     <string name="txt_p1">Player 1</string>
