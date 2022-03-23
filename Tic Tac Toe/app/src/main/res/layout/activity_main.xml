@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8A4DCF"
+    android:background="#FFEEAD"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="456dp"
-        android:layout_height="274dp"
+        android:layout_width="458dp"
+        android:layout_height="253dp"
         android:background="@drawable/mainbg1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,31 +22,20 @@
         android:id="@+id/textView"
         android:layout_width="286dp"
         android:layout_height="82dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginBottom="108dp"
         android:fontFamily="@font/cuprum"
         android:text="@string/txt_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#FFFFFF"
         android:textSize="28pt"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="384dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="8dp"
-        android:text="- - - - - - - - - - - - - - - - - - - -"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="15pt"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.142" />
 
     <Button
         android:id="@+id/btn_play_now"
@@ -67,8 +56,8 @@
 
     <Button
         android:id="@+id/btn_about"
-        android:layout_width="159dp"
-        android:layout_height="52dp"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/blue_btn"
         android:fontFamily="@font/cuprum"
@@ -89,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_presented"
-        android:textColor="#FFFFFF"
+        android:textColor="#1F1753"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.064"
