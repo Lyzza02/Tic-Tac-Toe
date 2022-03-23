@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gamebg"
     tools:context=".MainGame">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Player 1"
         android:textSize="20dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:text="Player 2"
         android:textSize="20dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
@@ -39,6 +42,7 @@
         android:layout_marginTop="8dp"
         android:text="0"
         android:textSize="14dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintLeft_toLeftOf="@id/playerOne"
         app:layout_constraintTop_toBottomOf="@id/playerOne" />
 
@@ -50,7 +54,7 @@
         android:layout_marginRight="28dp"
         android:textSize="14dp"
         android:text="0"
-
+        android:textColor="#FFFFFF"
         app:layout_constraintRight_toRightOf="@id/playerTwo"
         app:layout_constraintTop_toBottomOf="@id/playerTwo" />
 
@@ -59,7 +63,7 @@
         android:id="@+id/playerStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:textColor="#FFFFFF"
         android:textAlignment="center"
         android:textSize="16dp"
         app:layout_constraintTop_toBottomOf="@id/playerOneScore"
@@ -74,7 +78,7 @@
         android:textSize="60dp"
         android:text=""
         android:textStyle="bold"
-        android:backgroundTint="#323aab"
+        android:backgroundTint="#74E7E4"
         app:layout_constraintTop_toBottomOf="@id/playerStatus"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="8dp"
@@ -88,7 +92,7 @@
         android:textSize="60dp"
         android:text=""
         android:textStyle="bold"
-        android:backgroundTint="#323aab"
+        android:backgroundTint="#74E7E4"
         app:layout_constraintTop_toBottomOf="@id/playerStatus"
         app:layout_constraintLeft_toRightOf="@id/btn_0"
         android:layout_marginLeft="3dp"
@@ -101,7 +105,7 @@
         android:textSize="60dp"
         android:text=""
         android:textStyle="bold"
-        android:backgroundTint="#323aab"
+        android:backgroundTint="#74E7E4"
         app:layout_constraintTop_toBottomOf="@id/playerStatus"
         app:layout_constraintLeft_toRightOf="@id/btn_1"
         android:layout_marginLeft="3dp"
@@ -114,7 +118,7 @@
         android:textSize="60dp"
         android:text=""
         android:textStyle="bold"
-        android:backgroundTint="#323aab"
+        android:backgroundTint="#74E7E4"
         app:layout_constraintTop_toBottomOf="@id/btn_0"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="8dp"
@@ -128,7 +132,7 @@
         android:textSize="60dp"
         android:text=""
         android:textStyle="bold"
-        android:backgroundTint="#323aab"
+        android:backgroundTint="#74E7E4"
         app:layout_constraintTop_toBottomOf="@id/btn_1"
         app:layout_constraintLeft_toRightOf="@id/btn_3"
         android:layout_marginLeft="3dp"
@@ -141,7 +145,7 @@
         android:textSize="60dp"
         android:text=""
         android:textStyle="bold"
-        android:backgroundTint="#323aab"
+        android:backgroundTint="#74E7E4"
         app:layout_constraintTop_toBottomOf="@id/btn_2"
         app:layout_constraintLeft_toRightOf="@id/btn_4"
         android:layout_marginLeft="3dp"
@@ -154,7 +158,7 @@
         android:layout_height="130dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="3dp"
-        android:backgroundTint="#323aab"
+        android:backgroundTint="#74E7E4"
         android:text=""
         android:textSize="60dp"
         android:textStyle="bold"
@@ -167,7 +171,7 @@
         android:layout_height="130dp"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="3dp"
-        android:backgroundTint="#323aab"
+        android:backgroundTint="#74E7E4"
         android:text=""
         android:textSize="60dp"
         android:textStyle="bold"
@@ -180,7 +184,7 @@
         android:layout_height="130dp"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="3dp"
-        android:backgroundTint="#323aab"
+        android:backgroundTint="#74E7E4"
         android:textSize="60dp"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@id/btn_7"
@@ -188,14 +192,14 @@
 
     <Button
         android:id="@+id/resetGame"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="393dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#d61313"
         android:text="Reset Game"
         android:textStyle="bold"
-        android:backgroundTint="#d61313"
-        app:layout_constraintTop_toBottomOf="@id/btn_6"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="10dp" />
+        app:layout_constraintTop_toBottomOf="@id/btn_6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
