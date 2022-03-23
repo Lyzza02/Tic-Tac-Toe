@@ -22,9 +22,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btn_exit = findViewById<Button>(R.id.btn_exit)
-        btn_exit.setOnClickListener {
-            onBackPressed()
+        val btn_about = findViewById<Button>(R.id.btn_about)
+        btn_about.setOnClickListener {
+            val intent = Intent(this,AboutUs::class.java)
+            startActivity(intent)
         }
     }
 
