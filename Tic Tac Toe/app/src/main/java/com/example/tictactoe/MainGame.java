@@ -165,6 +165,7 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
         new AlertDialog.Builder(this)
                 .setTitle("Exit")
                 .setMessage("Are you sure you want to exit?")
+                .setIcon(R.drawable.ic_action_warning)
                 .setNegativeButton(android.R.string.no, null)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {

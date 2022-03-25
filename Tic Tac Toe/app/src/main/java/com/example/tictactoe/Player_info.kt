@@ -45,20 +45,6 @@ class Player_info : AppCompatActivity() {
 
     override fun onBackPressed() {
         //Dialog box
-        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-        builder.setTitle("Exit")
-        builder.setMessage("Are you sure you want to exit?")
-        builder.setIcon(R.drawable.ic_action_warning)
-
-        builder.setPositiveButton("Ok", DialogInterface.OnClickListener{ dialog, which ->
-            finishAffinity()
-        })
-
-        builder.setNegativeButton("Cancel", DialogInterface.OnClickListener{ dialog, which ->
-            dialog.dismiss()
-        })
-
-        val alertDialog: AlertDialog = builder.create()
-        alertDialog.show()
+        finish()
     }
 }
