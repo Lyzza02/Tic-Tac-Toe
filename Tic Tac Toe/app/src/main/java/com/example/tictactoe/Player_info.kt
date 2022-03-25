@@ -35,6 +35,9 @@ class Player_info : AppCompatActivity() {
         } else {
             //going to the next acivity (Main Game)
             val intent = Intent(this,MainGame::class.java)
+            //pass the names of the play to MainGame
+            intent.putExtra("p1_name",p1.getText().toString())
+            intent.putExtra("p2_name",p2.getText().toString())
             startActivity(intent)
             finish()
         }
@@ -44,7 +47,7 @@ class Player_info : AppCompatActivity() {
         //Dialog box
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle("Exit")
-        builder.setMessage("Are you going to exit?")
+        builder.setMessage("Are you sure you want to exit?")
         builder.setIcon(R.drawable.ic_action_warning)
 
         builder.setPositiveButton("Ok", DialogInterface.OnClickListener{ dialog, which ->

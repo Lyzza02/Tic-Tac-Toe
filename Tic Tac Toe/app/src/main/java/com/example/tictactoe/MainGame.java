@@ -1,20 +1,24 @@
 package com.example.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class MainGame extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView playerOneScore, playerTwoScore, playerStatus;
+    private TextView playerOneScore, playerTwoScore, playerStatus,playerOneName, playerTwoName;
     private Button[] buttons = new Button[9];
     private Button resetGame;
 
-    private String  playerOneName, playerTwoName;
     private int playerOneScoreCount, playerTwoScoreCount, roundCount;
     boolean activePlayer;
     int [] gameState = {2,2,2,2,2,2,2,2,2};
@@ -23,21 +27,39 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
             {0,3,6},{1,4,7},{2,5,8},
             {0,4,8},{2,4,6}};
 
-//    public MainGame(String p1, String p2){
-//        this.playerOneName = p1;
-//        this.playerTwoName = p2;
-//    }
+    String tmp_1;
+    String tmp_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_game);
+        getSupportActionBar().hide(); //hide action bar
 
         playerOneScore = (TextView) findViewById(R.id.playerOneScore);
         playerTwoScore = (TextView) findViewById(R.id.playerTwoScore);
         playerStatus = (TextView) findViewById(R.id.playerStatus);
 
+        playerOneName = (TextView) findViewById(R.id.playerOne);
+        playerTwoName = (TextView) findViewById(R.id.playerTwo);
+
         resetGame = (Button) findViewById(R.id.resetGame);
+
+        //getting the names from Player_info
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+
+        if(b!=null)
+        {
+            System.out.println("Your message" +playerOneName);
+            System.out.println("Your message" + playerTwoName);
+
+            tmp_1 = (String) b.get("p1_name");
+            tmp_2 = (String) b.get("p2_name");
+
+            playerOneName.setText(tmp_1);
+            playerTwoName.setText(tmp_2);
+        }
 
         for(int i = 0; i < buttons.length; i++){
             String buttonId = "btn_" + i;
@@ -76,12 +98,12 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
             if(activePlayer){
                 playerOneScoreCount++;
                 updatePlayerScore();
-                Toast.makeText(this,"Player One Won!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,tmp_1+" Won!", Toast.LENGTH_SHORT).show();
                 playAgain();
             }else{
                 playerTwoScoreCount++;
                 updatePlayerScore();
-                Toast.makeText(this,"Player Two Won!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,tmp_2+" Won!", Toast.LENGTH_SHORT).show();
                 playAgain();
             }
         }else if (roundCount == 9){
@@ -92,9 +114,9 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
         }
 
         if(playerOneScoreCount > playerTwoScoreCount){
-            playerStatus.setText("Player One is Winning!");
+            playerStatus.setText(tmp_1 +" is Winning!");
         }else if(playerTwoScoreCount > playerOneScoreCount){
-            playerStatus.setText("Player Two is Winning!");
+            playerStatus.setText(tmp_2 +" is Winning!");
         }else{
             playerStatus.setText("");
         }
@@ -136,5 +158,19 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
             gameState[i] = 2;
             buttons[i].setText("");
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Exit")
+                .setMessage("Are you sure you want to exit?")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        finishAffinity();
+                    }
+
+                }).create().show();
     }
 }
