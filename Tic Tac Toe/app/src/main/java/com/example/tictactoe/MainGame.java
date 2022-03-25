@@ -12,11 +12,10 @@ import android.content.Intent;
 
 public class MainGame extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView playerOneScore, playerTwoScore, playerStatus;
+    private TextView playerOneScore, playerTwoScore, playerStatus,playerOneName, playerTwoName;
     private Button[] buttons = new Button[9];
     private Button resetGame;
 
-    private String  playerOneName, playerTwoName;
     private int playerOneScoreCount, playerTwoScoreCount, roundCount;
     boolean activePlayer;
     int [] gameState = {2,2,2,2,2,2,2,2,2};
@@ -24,6 +23,9 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
             {0,1,2},{3,4,5},{6,7,8},
             {0,3,6},{1,4,7},{2,5,8},
             {0,4,8},{2,4,6}};
+
+    String tmp_1;
+    String tmp_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,9 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
         playerTwoScore = (TextView) findViewById(R.id.playerTwoScore);
         playerStatus = (TextView) findViewById(R.id.playerStatus);
 
+        playerOneName = (TextView) findViewById(R.id.playerOne);
+        playerTwoName = (TextView) findViewById(R.id.playerTwo);
+
         resetGame = (Button) findViewById(R.id.resetGame);
 
         //getting the names from Player_info
@@ -43,13 +48,15 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
 
         if(b!=null)
         {
-            playerOneName =(String) b.get("p1_name");
-            playerTwoName =(String) b.get("p2_name");
-
             System.out.println("Your message" +playerOneName);
             System.out.println("Your message" + playerTwoName);
-        }
 
+            tmp_1 = (String) b.get("p1_name");
+            tmp_2 = (String) b.get("p2_name");
+
+            playerOneName.setText(tmp_1);
+            playerTwoName.setText(tmp_2);
+        }
 
         for(int i = 0; i < buttons.length; i++){
             String buttonId = "btn_" + i;
@@ -88,12 +95,12 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
             if(activePlayer){
                 playerOneScoreCount++;
                 updatePlayerScore();
-                Toast.makeText(this,"Player One Won!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,tmp_1+" Won!", Toast.LENGTH_SHORT).show();
                 playAgain();
             }else{
                 playerTwoScoreCount++;
                 updatePlayerScore();
-                Toast.makeText(this,"Player Two Won!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,tmp_2+" Won!", Toast.LENGTH_SHORT).show();
                 playAgain();
             }
         }else if (roundCount == 9){
@@ -104,9 +111,9 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
         }
 
         if(playerOneScoreCount > playerTwoScoreCount){
-            playerStatus.setText("Player One is Winning!");
+            playerStatus.setText(tmp_1 +" is Winning!");
         }else if(playerTwoScoreCount > playerOneScoreCount){
-            playerStatus.setText("Player Two is Winning!");
+            playerStatus.setText(tmp_2 +" is Winning!");
         }else{
             playerStatus.setText("");
         }
