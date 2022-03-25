@@ -3,6 +3,7 @@ package com.example.tictactoe;
 import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,15 +25,11 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
             {0,3,6},{1,4,7},{2,5,8},
             {0,4,8},{2,4,6}};
 
-//    public MainGame(String p1, String p2){
-//        this.playerOneName = p1;
-//        this.playerTwoName = p2;
-//    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_game);
+        getSupportActionBar().hide(); //hide action bar
 
         playerOneScore = (TextView) findViewById(R.id.playerOneScore);
         playerTwoScore = (TextView) findViewById(R.id.playerTwoScore);
@@ -40,16 +37,17 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
 
         resetGame = (Button) findViewById(R.id.resetGame);
 
+        //getting the names from Player_info
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
 
         if(b!=null)
         {
-            String tmp_1 =(String) b.get("p1_name");
-            String tmp_2 =(String) b.get("p2_name");
+            playerOneName =(String) b.get("p1_name");
+            playerTwoName =(String) b.get("p2_name");
 
-            this.playerOneName = tmp_1;
-            this.playerTwoName = tmp_2;
+            System.out.println("Your message" +playerOneName);
+            System.out.println("Your message" + playerTwoName);
         }
 
 
