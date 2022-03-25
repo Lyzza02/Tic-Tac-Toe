@@ -47,7 +47,7 @@ class Player_info : AppCompatActivity() {
         //Dialog box
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle("Exit")
-        builder.setMessage("Are you going to exit?")
+        builder.setMessage("Are you sure you want to exit?")
         builder.setIcon(R.drawable.ic_action_warning)
 
         builder.setPositiveButton("Ok", DialogInterface.OnClickListener{ dialog, which ->
