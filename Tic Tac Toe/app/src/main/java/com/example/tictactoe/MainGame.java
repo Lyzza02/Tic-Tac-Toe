@@ -6,7 +6,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -27,8 +26,8 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
             {0,3,6},{1,4,7},{2,5,8},
             {0,4,8},{2,4,6}};
 
-    String tmp_1;
-    String tmp_2;
+    String p1_name_label;
+    String p2_name_label;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,14 +50,11 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
 
         if(b!=null)
         {
-            System.out.println("Your message" +playerOneName);
-            System.out.println("Your message" + playerTwoName);
+            p1_name_label = (String) b.get("p1_name");
+            p2_name_label = (String) b.get("p2_name");
 
-            tmp_1 = (String) b.get("p1_name");
-            tmp_2 = (String) b.get("p2_name");
-
-            playerOneName.setText(tmp_1);
-            playerTwoName.setText(tmp_2);
+            playerOneName.setText(p1_name_label);
+            playerTwoName.setText(p2_name_label);
         }
 
         for(int i = 0; i < buttons.length; i++){
@@ -98,12 +94,12 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
             if(activePlayer){
                 playerOneScoreCount++;
                 updatePlayerScore();
-                Toast.makeText(this,tmp_1+" Won!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,p1_name_label +" Won!", Toast.LENGTH_SHORT).show();
                 playAgain();
             }else{
                 playerTwoScoreCount++;
                 updatePlayerScore();
-                Toast.makeText(this,tmp_2+" Won!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,p2_name_label+" Won!", Toast.LENGTH_SHORT).show();
                 playAgain();
             }
         }else if (roundCount == 9){
@@ -114,9 +110,9 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
         }
 
         if(playerOneScoreCount > playerTwoScoreCount){
-            playerStatus.setText(tmp_1 +" is Winning!");
+            playerStatus.setText(p1_name_label +" is Winning!");
         }else if(playerTwoScoreCount > playerOneScoreCount){
-            playerStatus.setText(tmp_2 +" is Winning!");
+            playerStatus.setText(p2_name_label +" is Winning!");
         }else{
             playerStatus.setText("");
         }
@@ -169,7 +165,9 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
                 .setNegativeButton(android.R.string.no, null)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
-                        finishAffinity();
+                        Intent intent = new Intent(MainGame.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
                     }
 
                 }).create().show();

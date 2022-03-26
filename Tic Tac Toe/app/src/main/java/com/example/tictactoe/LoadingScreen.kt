@@ -26,6 +26,5 @@ class LoadingScreen : AppCompatActivity() {
             startActivity(intent)
             finish()
         },3000)
-
     }
 }

@@ -1,5 +1,6 @@
 package com.example.tictactoe
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -9,5 +10,11 @@ class AboutUs : AppCompatActivity() {
         setContentView(R.layout.activity_about_us)
 
         supportActionBar?.hide() //hide action bar
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this,LoadingScreen::class.java)
+        startActivity(intent)
+        finish()
     }
 }
