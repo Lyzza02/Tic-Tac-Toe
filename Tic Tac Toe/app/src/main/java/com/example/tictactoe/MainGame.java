@@ -121,6 +121,7 @@ public class MainGame extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onClick(View view) {
                 playAgain();
+                Toast.makeText(MainGame.this, "The game has been restarted.", Toast.LENGTH_SHORT).show();
                 playerOneScoreCount = 0;
                 playerTwoScoreCount = 0;
                 playerStatus.setText("");
