@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToe">
         <activity
+            android:name=".LoadingScreen"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".AboutUs"
             android:exported="false"
             android:screenOrientation="portrait" />

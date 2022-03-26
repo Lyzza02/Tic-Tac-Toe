@@ -34,7 +34,8 @@ class Player_info : AppCompatActivity() {
             Toast.makeText(applicationContext,  "Empty field not allowed!", duration).show();
         } else {
             //going to the next acivity (Main Game)
-            val intent = Intent(this,MainGame::class.java)
+          //  val intent = Intent(this,MainGame::class.java)
+            val intent = Intent(this,LoadingScreen::class.java)
             //pass the names of the play to MainGame
             intent.putExtra("p1_name",p1.getText().toString())
             intent.putExtra("p2_name",p2.getText().toString())
