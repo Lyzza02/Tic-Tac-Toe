@@ -35,7 +35,7 @@ class Player_info : AppCompatActivity() {
         } else {
             //going to the next activity
             val intent = Intent(this,LoadingScreen::class.java)
-            //pass the names of the play to MainGame
+            //pass the names
             intent.putExtra("p1_name",p1.getText().toString())
             intent.putExtra("p2_name",p2.getText().toString())
             startActivity(intent)
@@ -44,7 +44,8 @@ class Player_info : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        //Dialog box
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
         finish()
     }
 }
