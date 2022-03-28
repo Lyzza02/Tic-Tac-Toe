@@ -3,9 +3,9 @@ Making a simple Tic-Tac-Toe using Kotlin and Java in Android Studio for Mobile P
 
 <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
   <tr>
-    <td align="center">Splash Screen</td>
-    <td align="center">Start Screen</td>
-    <td align="center">About Us</td>
+    <td align="center"><h4>Splash Screen</h4></td>
+    <td align="center"><h4>Start Screen</h4></td>
+    <td align="center"><h4>About Us</h4></td>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/76563020/160107536-553291d2-74f5-4c66-b93d-f1651d5d1959.png"  width="295" alt = "splashScreen.png"></td>
@@ -13,9 +13,9 @@ Making a simple Tic-Tac-Toe using Kotlin and Java in Android Studio for Mobile P
     <td><img src="https://user-images.githubusercontent.com/76563020/160416468-31f76d55-1da5-4393-ab37-3c1c2f4416b3.png"  width="300" alt = "AboutUs.png"></td>
   </tr>
    <tr>
-    <td align="center">Player Information (Input)</td>
-    <td align="center">Player Information <br>(Sample names from Genshin Impact)</td>
-    <td align="center">Main Game</td>
+    <td align="center"><h4>Player Information (Input)</h4></td>
+    <td align="center"><h4>Player Information <br>(Sample names from Genshin Impact)</h4></td>
+    <td align="center"><h4>Main Game</h4></td>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/76563020/160416846-07f13961-1376-409e-8d5b-8f4177415b10.png"  width="290" alt = "playerInfo.png"></td>
