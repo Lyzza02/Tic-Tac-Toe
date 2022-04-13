@@ -1,4 +1,4 @@
-# Tic-Tac-Toe
+# TicTacToe-Kotlin-Java-App
 Making a Simple Tic-Tac-Toe Game using Kotlin and Java in Android Studio for Mobile Programming FINALS
 
 <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
